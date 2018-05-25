@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <div class='erros'>
+            <% if(errosValidacao) { %>
+                <ul>
+                    <% for(var i=0; i < errosValidacao.length; i++) {%>
+                        <li>
+                            <%= errosValidacao[i].param %> - <%= errosValidacao[i].msg %>
+                        </li>
+                    <%}%>
+                </ul>
+            <%}%>
+        </div>
+        <table>
+            <tr>
+                <td>id</td>
+                <td>titulo</td>
+                <td>descricao</td>
+                <td>preco</td>
+            </tr>                
+            <% for(var i=0; i<lista.length; i++) {%>
+                <tr>
+                    <td><%= lista[i].id %></td>
+                    <td><%= lista[i].titulo %></td>
+                    <td><%= lista[i].preco %></td>
+                    <td><%= lista[i].descricao%></td>
+                </tr>
+            <% } %>
+        </table>
+    </body>
+</html>
